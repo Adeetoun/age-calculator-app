@@ -1,14 +1,14 @@
-const error = document.querySelector('.alert')
-
+const error = document.querySelector('.alert');
+const inputs = document.querySelectorAll('input');
 
 function isLeapYear(year) {
     return(year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 }
 
 function calculateAge() {
-    const day = document.getElementById('day').value;
-    const month = document.getElementById('month').value;
-    const year = document.getElementById('year').value;
+    const day = parseInt(document.getElementById('day').value);
+    const month = parseInt(document.getElementById('month').value);
+    const year = parseInt(document.getElementById('year').value);
 
 
     if (month > 12 || month < 1) {
@@ -52,11 +52,20 @@ if (ageDays < 0) {
 
     init();
     
-    document.getElementById('years').innerHTML = ageYears + " years";
-    document.getElementById('days').innerHTML = ageMonths + " months" ;
-    document.getElementById('months').innerHTML = ageDays + " days";
-
-} 
+    document.getElementById('span').innerHTML = `${ageYears}`;
+    document.getElementById('months-span').innerHTML = `${ageMonths} `;
+    document.getElementById('days-span').innerHTML = `${ageDays}`;
+} else {
+    inputs.forEach(input => {
+        if(input.value === '') {
+        error.classList.add('alert');
+        error.style.display = 'block';
+        }
+    })
+    setTimeout(function() {
+        error.style.display = 'none';
+    },3000);
+}
 
 }
 
