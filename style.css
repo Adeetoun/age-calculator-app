@@ -1,15 +1,16 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.google.com/specimen/Poppins');
 
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     background: hsl(0, 0%, 94%);
 }
@@ -43,12 +44,16 @@ body{
 }
 .alert{
   padding: 10px 10px;
+  margin: 0 auto;
+  margin-top: 10px;
   margin-bottom: 5px;
   border: 1px solid red;
   border-radius: 5px;
   background-color: red;
   color: #fff;
   display: none;
+  width: 80%;
+  text-align: center;
 }
 .divider{
     margin-top: 20px;
@@ -75,4 +80,16 @@ p{
 }
 p span{
     color: hsl(259, 100%, 65%);
+}
+
+@media(max-width: 768px){
+    body{
+        flex-direction: column;
+    }
+    .container{
+       width: 90%;
+       height: auto;
+       justify-content: center;
+       align-items: center; 
+    }
 }
