@@ -61,6 +61,7 @@ if (ageDays < 0) {
 }
 
 document.querySelector('.calculate').addEventListener('click', calculateAge);
+
  function init() {
     document.querySelector('#day').value = '';
     document.querySelector('#month').value = '';
