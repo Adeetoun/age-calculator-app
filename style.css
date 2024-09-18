@@ -63,6 +63,10 @@ body{
 hr{
     width: 80%;
 }
+button{
+    background: #fff;
+    border: none;
+}
 img{
     background: hsl(259, 100%, 65%);
     border-radius: 50%;
