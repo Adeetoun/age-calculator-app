@@ -64,7 +64,7 @@ hr{
     width: 80%;
 }
 button{
-    background: #fff;
+    background: hsl(0, 0%, 100%);
     border: none;
 }
 img{
